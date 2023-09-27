@@ -14,7 +14,7 @@ This project demonstrates how to interface with the Tiny RTC module, which combi
 1. Clone this repository to your local development environment.
 
 ```
-git clone https://FarhanaJamal@bitbucket.org/Bihardware/esp-drivers.git 
+git clone https://github.com/nikhil-robinson/esp-idf-drivers.git
 ```
 2. Navigate to the Project Directory
 ```
