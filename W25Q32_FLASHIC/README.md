@@ -5,6 +5,9 @@ This W25Q32 Flash Memory Example Project demonstrates how to interface with the 
 ## Table of Contents
 
 - [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Getting Started](#getting-started)
 - [Hardware Required](#hardware-required)
 - [Usage](#usage)
 - [Example Output](#example-output)
@@ -31,6 +34,32 @@ idf.py -p /dev/ttyUSB0 flash
 ```
 change /dev/ttyUSB0 to your portname
 
+## Project Structure
+
+The project is organized into the following folders:
+
+- **components:** Contains libraries and dependencies.
+- **main:** Contains the main code and CMakeLists.txt for building the project.
+- **CMakeLists.txt:** The CMake configuration file for the project.
+- **sdkConfig:** Configures build settings for esp-idf projects.
+
+
+## Dependencies
+
+The project relies on the following library:
+
+**w25q32.h:** library provides a set of functions for interfacing with the W25Q32 serial flash memory chip over SPI communication, making it easy to perform operations such as reading, writing, erasing sectors, and accessing status information. It also supports 4-byte addressing mode and quad SPI for enhanced data transfer rates and capacity utilization.
+
+Please make sure to include these library before building the project.
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Install the necessary dependencies (see [Dependencies](#dependencies)).
+3. Build the project using CMake.
+
 ## Hardware Required
 
 To run this project, you will need the following hardware components:
@@ -49,7 +78,7 @@ To run this project, you will need the following hardware components:
 |                      |           |                  |
 |              SCLK(13)|-----------| CLK              |
  ----------------------             ------------------     
-  ```
+```
 
 Connect the MOSI ,MISO , SCLK and CS pins of the ESP32-S3 to their corresponding pins on the W25Q32. Additionally, provide power (VCC) and ground (GND) connections to both devices.
 
